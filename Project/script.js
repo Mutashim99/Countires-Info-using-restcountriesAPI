@@ -1,19 +1,23 @@
-const allcardsContainer = document.querySelector(".all-cards")
+const allcardsContainer = document.querySelector(".all-cards");
 
-fetch("")
+fetch("https://restcountries.com/v3.1/all")
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((data) => {
+      const countryCardDiv = document.createElement("div");
+      countryCardDiv.classList.add("card-container");
 
-
-
-
-const countryCardDiv = document.createElement("div")
-countryCardDiv.classList.add("card-container")
-countryCardDiv.innerHTML = `<a href="#" class="card">
-              <img src="https://flagcdn.com/af.svg" alt="flag-pic" />
+      countryCardDiv.innerHTML = `<a href="#" class="card">
+              <img src="${data.flags.svg}" alt="flag-pic" />
               <div class="text-area">
-                <h3><b>Afghanistan</b> </h3>
-                <p><b>Population:</b> </p>
-                <p><b>Capital:</b> </p>
-                <p><b>Region:</b> </p>
+                <h3><b>${data.name.common}</b></h3>
+                <p><b>Population:</b> ${data.population.toLocaleString(
+                  "en-PK"
+                )}</p>
+                <p><b>Capital:</b> ${data.capital?.[0]}</p>
+                <p><b>Region:</b> ${data.region} </p>
               </div>
-            </a>`
-allcardsContainer.appendChild(countryCardDiv)
+            </a>`;
+      allcardsContainer.appendChild(countryCardDiv);
+    });
+  });
