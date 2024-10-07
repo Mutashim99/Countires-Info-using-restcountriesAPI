@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -8,19 +8,24 @@ html, body {
     margin: 0;
     padding: 0;
 } 
-.nav-container{
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white; 
+}
+.nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 50px;
-    box-shadow: ;
-    
+    box-shadow: 0px 0px 4px 1px black;  
 }
-
-.left h1{
+.left h1 {
     font-weight: 800;
 }
-.right{
+
+.right {
     border: 2px solid black;
     padding: 5px 0;
     border-radius: 20px;
@@ -30,23 +35,18 @@ html, body {
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
-.right:hover{
+
+.right:hover {
     background-color: black;
     color: aliceblue;
 }
-.right p{
+
+.right p {
     font-weight: 800;
     font-size: 12px;
 }
 
-
-
-
-
-
-/* Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
-Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
-Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
-Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
-Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
-White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%) */
+/* Content styling */
+.content {
+    padding: 20px;
+}
