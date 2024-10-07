@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+} 
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    box-shadow: ;
+    
+}
+
+.left h1{
+    font-weight: 800;
+}
+.right{
+    border: 2px solid black;
+    padding: 5px 0;
+    border-radius: 20px;
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.right:hover{
+    background-color: black;
+    color: aliceblue;
+}
+.right p{
+    font-weight: 800;
+    font-size: 12px;
+}
+
+
+
+
+
+
+/* Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%) */
