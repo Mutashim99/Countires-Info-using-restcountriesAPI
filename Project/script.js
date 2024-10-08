@@ -7,7 +7,7 @@ fetch("https://restcountries.com/v3.1/all")
       const countryCardDiv = document.createElement("div");
       countryCardDiv.classList.add("card-container");
 
-      countryCardDiv.innerHTML = `<a href="#" class="card">
+      countryCardDiv.innerHTML = `<a href="countrypage.html?name=${data.name.common}" class="card">
               <img src="${data.flags.svg}" alt="flag-pic" />
               <div class="text-area">
                 <h3><b>${data.name.common}</b></h3>
