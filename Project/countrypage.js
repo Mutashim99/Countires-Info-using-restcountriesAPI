@@ -13,17 +13,10 @@ const currency = document.querySelector("#currencies")
 const language = document.querySelector("#languages")
 const borderTag = document.querySelector("#border-countries")
 
-
-
-
-
 fetch(`https://restcountries.com/v3.1/name/${countryName}`)
   .then((res) => res.json())
   .then(([data]) => {
     
-    
-    
-
   console.log(data);
   countryFlagimg.src = data.flags.svg? data.flags.svg : "#"
   countryNameH1.innerText = data.name.common

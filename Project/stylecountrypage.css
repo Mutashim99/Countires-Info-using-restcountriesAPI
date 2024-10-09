@@ -75,13 +75,20 @@ a{
 }
 .information{
     display: flex;
+    
 }
 .info1{
     margin-right: 20px;
     max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .info2{
     max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .right-main{
     margin-left: 50px;
