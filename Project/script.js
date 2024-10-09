@@ -4,6 +4,8 @@ fetch("https://restcountries.com/v3.1/all")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((data) => {
+      console.log(data.name.common);
+      console.log(data.currencies);
       const countryCardDiv = document.createElement("div");
       countryCardDiv.classList.add("card-container");
 
