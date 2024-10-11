@@ -96,3 +96,104 @@ a {
 .text-area p {
   font-size: 22px;
 }
+
+.search{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 60px;
+  width: 400px;
+  box-shadow:0 2px 4px 0px rgba(0, 0, 0, 0.5); ;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-left: 85px;
+}
+.search img{
+  width: 30px;
+  height: 30px;
+}
+
+.search input{
+  border: none;
+  margin: 10px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 20px;
+}
+
+.search input:focus {
+  border: none; 
+  outline: none; 
+}
+
+.upper-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sort-tag{
+  background-color: white;
+  height: 60px;
+  width: 400px;
+  box-shadow:0 2px 4px 0px rgba(0, 0, 0, 0.5); ;
+  padding: 0 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-right: 85px;
+  border: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+}
+.sort-tag:focus{
+  border: none;
+  outline: none;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode header {
+  background-color: #1a1a1a;
+}
+
+.dark-mode .nav-container {
+  box-shadow: 0px 0px 4px 1px #ffffff;
+}
+
+.dark-mode .right {
+  border: 2px solid #ffffff;
+}
+
+.dark-mode .right:hover {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+.dark-mode .card-container {
+  box-shadow: 0 2px 4px 0px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .search,
+.dark-mode .sort-tag {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  box-shadow: 0 2px 4px 0px rgba(255, 255, 255, 0.5);
+}
+
+.dark-mode input {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.dark-mode input::placeholder {
+  color: lightgray;
+}
+
+.dark-mode input:focus {
+  border: none;
+  outline: none;
+}

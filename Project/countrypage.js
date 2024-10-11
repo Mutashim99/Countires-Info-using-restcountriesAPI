@@ -13,6 +13,13 @@ const currency = document.querySelector("#currencies")
 const language = document.querySelector("#languages")
 const borderTag = document.querySelector("#border-countries")
 
+const darkModeToggle = document.querySelector('.right');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+        
 fetch(`https://restcountries.com/v3.1/name/${countryName}`)
   .then((res) => res.json())
   .then(([data]) => {
@@ -37,6 +44,7 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}`)
   const lang = Object.values(data.languages).join(", ")
   language.innerText = lang
 
+  if(data.borders){
   data.borders.map((border) =>{
     fetch(`https://restcountries.com/v3.1/alpha/${border}`)
     .then((res)=>res.json())
@@ -48,5 +56,7 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}`)
       borderTag.appendChild(aTag)
     })
   })
-  
+}
   });
+
+
